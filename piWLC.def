@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventoryDefaults
+xmlns="http://www.cisco.com/cfr2"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+fileFormatVersion="1"
+xsi:schemaLocation="http://www.cisco.com/cfr2 xdeInventoryDefaults.xsd"
+extendsFile="customDEFAULT.def">
+<description>Cisco WLC Device</description>
+<example>
+<DEVICE_VENDOR>Cisco</DEVICE_VENDOR>
+<software>Wide Area Application Services</software>
+</example>
+<test>
+<software>Cisco Controller</software>
+</test>
+<default attribute="CLI_PREAMBLE">config paging disable</default>
+    <default attribute="CLI_USERNAME_EXPECT">User:\s*\z</default>
+    <default attribute="CLI_CONFIG_PROMPT_SEARCH_EXPRESION">(\([^\)]+\)\s*)([&gt;#\$])\s*$</default>
+    <default attribute="CLI_CONFIG_PROMPT_REPLACE_EXPRESION">$1\\w+$2\\s*\\z</default>
+    <default attribute="NOM_ENGINE_TYPE">IOSNom</default>
+    <default attribute="SNMP_WALK_TYPE">ROW_BY_ROW_DENSE</default>
+    <default attribute="SNMP_FORCE_GET_NEXT">true</default>
+    <default attribute="SNMP_MAX_OIDS_PER_PDU">30</default>
+</inventoryDefaults>
